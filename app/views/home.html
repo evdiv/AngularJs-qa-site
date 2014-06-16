@@ -1,0 +1,18 @@
+<h1>{{appSettings.title}}</h1>
+
+<table class="table">
+    <tr>
+        <th>Date</th>
+        <th>User name</th>
+        <th>Question</th>
+    </tr>
+    <tr ng-repeat="question in questions">
+        <td>{{ question.date }}</td>
+        <td>{{ question.user }}</td>
+        <td><a href="#/questions/{{ question.id }}">{{ question.content }}</a></td>
+    </tr>
+</table>
+<br />
+<br />
+
+<span>Total questions: {{ questions.length }} </span>

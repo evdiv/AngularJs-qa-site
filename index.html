@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="simpleSiteApp">
+<head>
+    <title>Simple Site Application</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<header></header>
+<nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/pages/about">About</a></li>
+        <li><a href="#/pages/contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section ng-view></section>
+
+<footer></footer>
+
+<script src="app/angular.js"></script>
+<script src="app/angular-route.js"></script>
+<script src="app/angular-animate.js"></script>
+<script src="app/app.js"></script>
+
+<script src="app/controllers/questionsController.js" ></script>
+<script src="app/controllers/questionController.js" ></script>
+<script src="app/controllers/pageController.js" ></script>
+<script src="app/controllers/homeController.js" ></script>
+
+
+<script src="app/services/questionsFactory.js"></script>
+<script src="app/services/values.js"></script>
+
+</body>
+</html>
