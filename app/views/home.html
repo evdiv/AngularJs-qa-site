@@ -1,5 +1,13 @@
 <h1>{{appSettings.title}}</h1>
 
+<h3>{{ page.header }}</h3>
+
+<p>
+    <span>{{ page.content }}</span>
+</p>
+<h4>Last questions | <a href="#/questions/">All questions</a></h4>
+
+
 <table class="table">
     <tr>
         <th>Date</th>
@@ -12,7 +20,9 @@
         <td><a href="#/questions/{{ question.id }}">{{ question.content }}</a></td>
     </tr>
 </table>
+
 <br />
 <br />
+
 
 <span>Total questions: {{ questions.length }} </span>

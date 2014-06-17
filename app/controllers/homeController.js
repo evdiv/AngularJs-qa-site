@@ -4,10 +4,10 @@
 (function() {
     var HomeController = function ($scope, questionsFactory, appSettings) {
 
-        $scope.questions = questionsFactory.getQuestions();
+        $scope.page = questionsFactory.getPage('home');
+        $scope.questions = questionsFactory.getQuestions('1');
+
         $scope.appSettings = appSettings;
-
-
     };
 
     HomeController.$inject = ['$scope', 'questionsFactory', 'appSettings'];

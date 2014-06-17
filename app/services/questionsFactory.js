@@ -51,9 +51,15 @@
 
         var factory = {};
 
-        factory.getQuestions = function() {
-            return questions;
-        };
+
+        factory.getQuestions = function(numberOfQuestions) {
+            if(numberOfQuestions == null) {
+                return questions;
+            } else {
+                return questions.slice(questions.length - parseInt(numberOfQuestions));
+            }
+
+        }
 
         factory.getQuestion = function(questionId) {
             for(var i= 0, len=questions.length; i< len; i++) {

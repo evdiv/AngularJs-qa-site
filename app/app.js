@@ -10,7 +10,7 @@
                 controller: 'HomeController',
                 templateUrl: 'app/views/home.html'
             })
-            .when('/questions', {
+            .when('/questions/', {
                 controller: 'QuestionsController',
                 templateUrl: 'app/views/questions.html'
             })
