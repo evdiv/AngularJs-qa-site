@@ -8,19 +8,62 @@
                 id:1,
                 date: '2013-12-24',
                 user: 'Kyle',
-                content: 'Content of the first question'
+                content: 'One must fear the lotus in order to believe the follower of sincere satori.'
             },
             {
                 id:2,
                 date: '2014-02-15',
                 user: 'Monika',
-                content: 'Content of the second question'
+                content: 'Chicory combines greatly with cold chickpeas. '
             },
             {
                 id:3,
                 date: '2014-04-23',
                 user: 'Colin',
-                content: 'Content of the third question'
+                content: 'Holy heavens forgets most shames.'
+            },
+            {
+                id:4,
+                date: '2014-04-25',
+                user: 'Colin',
+                content: 'Where is the rough jolly roger.'
+            },
+            {
+                id:5,
+                date: '2014-04-26',
+                user: 'Mike',
+                content: 'Why does the transporter tremble.'
+            },
+            {
+                id:6,
+                date: '2014-04-27',
+                user: 'Eugene',
+                content: 'With meatloafs drink milk.'
+            }
+
+        ];
+
+        var answers = [
+            {
+                id: 1,
+                question_id: 6,
+                date: '2014-08-17',
+                user: 'Mark',
+                content: 'The totality of loving saints is abstruse.'
+            },
+            {
+                id: 2,
+                question_id: 3,
+                date: '2014-08-19',
+                user: 'Mark',
+                content: 'Try drying onion porridge decorateed with teriyaki.'
+            },
+            {
+                id: 3,
+                question_id: 3,
+                date: '2014-08-22',
+                user: 'Monika',
+                content: 'Try cooking margerine chili varnished with peanuts juice.'
             }
         ];
 
@@ -48,17 +91,30 @@
             }
         ];
 
+        var addAnswers = function (questions, answers) {
+            for(var i=0; i < questions.length; i ++) {
+                var questionId = questions[i].id;
+                questions[i].answers = [];
+
+                for(var j=0; j < answers.length; j++) {
+                    if(answers[j].question_id == questionId) {
+                        questions[i].answers.push(answers[j]);
+                    }
+                }
+            }
+            return questions;
+        };
 
         var factory = {};
-
+        questions = addAnswers(questions, answers);
 
         factory.getQuestions = function(numberOfQuestions) {
             if(numberOfQuestions == null) {
                 return questions;
             } else {
-                return questions.slice(questions.length - parseInt(numberOfQuestions));
+                questions = questions.slice(questions.length - parseInt(numberOfQuestions));
+                return questions;
             }
-
         }
 
         factory.getQuestion = function(questionId) {

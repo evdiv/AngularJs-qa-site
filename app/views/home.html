@@ -13,11 +13,14 @@
         <th>Date</th>
         <th>User name</th>
         <th>Question</th>
+        <th>Answer</th>
     </tr>
     <tr ng-repeat="question in questions">
         <td>{{ question.date }}</td>
         <td>{{ question.user }}</td>
         <td><a href="#/questions/{{ question.id }}">{{ question.content }}</a></td>
+        <td>{{ question.answers.length }}</a></td>
+
     </tr>
 </table>
 

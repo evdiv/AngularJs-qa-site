@@ -5,7 +5,7 @@
     var HomeController = function ($scope, questionsFactory, appSettings) {
 
         $scope.page = questionsFactory.getPage('home');
-        $scope.questions = questionsFactory.getQuestions('1');
+        $scope.questions = questionsFactory.getQuestions('4');
 
         $scope.appSettings = appSettings;
     };
